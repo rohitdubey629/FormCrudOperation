@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <title>First Webpage</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="center">Student Registration Form</h1>
+
+        <form action="#" name="stu_form" id="stu_form" method="post" enctype="multiform/form data"
+            onsubmit="onSubmit(event);">
+            <div class="sub-container">
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label for="name">Enter student name*: </label></div>
+                        <div> <input type="text" name="name" id="name" value="" placeholder="Enter student name"
+                                onchange="onChangeHandler(event);" />
+                        </div>
+                    </div>
+                    <div class="error-name">
+                        <label>*Name is required</label>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label for="fatherName">Enter father name*: </label></div>
+                        <div> <input type="text" name="fatherName" id="fatherName" value=""
+                                placeholder="Enter father name" onchange="onChangeHandler(event);" /></div>
+                    </div>
+                    <div class="error-fatherName">
+                        <label>*Father name is required</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label for="motherName">Enter mother name*:</label></div>
+                        <div> <input type="text" name="motherName" id="motherName" value=""
+                                placeholder="Enter mother name" onchange="onChangeHandler(event);" /></div>
+                    </div>
+                    <div class="error-motherName">
+                        <label>*Mother name is required</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label for="phone">Enter phone number*:</label></div>
+                        <div> <input type="text" name="phone" id="phone" value="" placeholder="Enter phone number"
+                                onchange="onChangeHandler(event);" />
+                        </div>
+                    </div>
+                    <div class="error-phone">
+                        <label>*Phone is required</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label>Please select gender*:</label></div>
+                        <div>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="male" onchange="onChangeHandler(event);" />
+                            <label for="female">Female</label>
+                            <input type="radio" name="gender" id="female" onchange="onChangeHandler(event);" />
+                        </div>
+                    </div>
+                    <div class="error-gender">
+                        <label>*Gender is required</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label for="address">Address*</label></div>
+                        <div><textarea name="address" id="address" cols="22" rows="4"
+                                onchange="onChangeHandler(event);"> </textarea></div>
+                    </div>
+                    <div class="error-address">
+                        <label>*Address is required</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label for="course">Please select course*</label></div>
+                        <div>
+                            <select id="course" name="course" onchange="onChangeHandler(event);">
+                                <option value="">Please select</option>
+                                <option value="BCA">BCA</option>
+                                <option value="MCA">MCA</option>
+                                <option value="PGDCA">PGDCA</option>
+                                <option value="MBA">MBA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="error-course">
+                        <label>*Course is required</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label for="qualification">Qualification*</label></div>
+                        <div>
+                            <label><input type="checkbox" name="highSchool" id="highSchool" value="10th"
+                                    onchange="onChangeHandler(event);" />10th</label>
+                            <label></label><input type="checkbox" name="interMediate" id="interMediate" value="12th"
+                                onchange="onChangeHandler(event);" />12th</label>
+                            <label></label><input type="checkbox" name="bca" id="bca" value="BCA"
+                                onchange="onChangeHandler(event);" />BCA</label>
+                            <label></label><input type="checkbox" name="mca" id="mca" value="MCA"
+                                onchange="onChangeHandler(event);" />MCA</label>
+                        </div>
+                    </div>
+                    <div class="error-qualification">
+                        <label>*Qualification is required</label>
+                        <label><input type="radio" name="10th">10th</label>
+                        <label><input type="radio" name="10th">12th</label>
+                        <label><input type="radio" name="bca">bca</label>
+                        <label><input type="radio" name="MCA">MCA</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <div class="form-element">
+                        <div><label for="photo">Please select photo</label></div>
+                        <div> <input type="file" value="Select photo..." /></div>
+                    </div>
+
+                    <div class="action">
+                        <button type="submit" id="submitInformation" class="btn-primary" isUpdate="null">Send
+                            Information</button>
+                        <button type="reset" id="clear" class="delete">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="tableContainer">
+        <table id="tableData" class="table-data">
+            <thead>
+                <tr>
+                    <th>Sr. Number</th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Mother Name</th>
+                    <th>Mobile</th>
+                    <th>Course</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBodyData"></tbody>
+        </table>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

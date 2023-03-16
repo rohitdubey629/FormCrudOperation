@@ -1,0 +1,119 @@
+.sub-container {
+    width: 60%;
+    margin: auto;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-element {
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+}
+
+.form-element>div {
+    width: 50%;
+}
+
+.action {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+    .form-element {
+        margin-bottom: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    .form-element>div {
+        width: 100%;
+    }
+
+    .form-element div:first-child {
+        margin-bottom: 10px;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+input[type='text'],
+select,
+textarea {
+    width: 100%;
+    border: 1px solid blueviolet;
+    border-radius: 3px;
+}
+
+input[type='text'],
+select {
+    height: 26px;
+}
+
+input[type='text']:focus,
+select:focus,
+textarea {
+    outline: none !important;
+}
+
+button {
+    height: 30px;
+    border: 0;
+    color: white;
+    background: black;
+    border-radius: 4px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+div[class^="error"] {
+    margin-left: 50%;
+    position: relative;
+    bottom: 6px;
+    margin-bottom: 5px;
+    color: red;
+    display: none;
+}
+
+.action-btn {
+    display: flex;
+}
+
+.action-btn button {
+    padding-left: 10px;
+}
+
+.tableContainer {
+    margin: 20px auto;
+    width: 90%;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+}
+
+.table-data {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin: 10px;
+    overflow-x: auto;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.delete {
+    background-color: #7a2727
+}
+
+.update {
+    background-color: #bc7e0d;
+}
+
+.btn-primary {
+    background-color: #089fdd;
+}
